@@ -1,0 +1,2 @@
+# JogoSupertrunfo
+Jogo em C
