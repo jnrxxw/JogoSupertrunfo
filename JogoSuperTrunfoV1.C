@@ -1,10 +1,18 @@
 #include <stdio.h>
 
 // Desafio Super Trunfo - Países
+// Tema 2 - Comparação das Cartas
+// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
+// Siga os comentários para implementar cada parte do desafio.
+
+int main() { 
+    
+
+// Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
 
 
-int main() {
+
     
     // carta 1
     
@@ -31,6 +39,15 @@ int main() {
     float soma2;
     float densidade2 ;
     float percapita2 ;
+
+    // comparação
+
+    int primeiroatributo ;
+    int segundoatributo ;
+    int resultado1;
+    int resultado2;
+
+
 
 
 
@@ -143,7 +160,7 @@ int main() {
 
     // calculo da Comparação das cartas
 
-    int resultadopopulacao , resultadoarea , resultadopib , resultadoponto , resultadodensidade , resultadocar , resultadosuper ;
+    /*int resultadopopulacao , resultadoarea , resultadopib , resultadoponto , resultadodensidade , resultadocar , resultadosuper ;
     
     resultadopopulacao = populacao > populacao2 ;
     resultadoarea = area > area2 ;
@@ -152,7 +169,7 @@ int main() {
     resultadodensidade = densidade  < densidade2;
     resultadocar = percapita > percapita2;
     resultadosuper = soma1 < soma2 ;
-    resultadosuper = soma1 > soma2 ;
+    resultadosuper = soma1 > soma2 ;*/
     
 
 
@@ -210,17 +227,317 @@ int main() {
     printf ( "Super Poder : %.2f\n" , soma2 );
 
 
-    // Comparação das Cartas
+    // escolher primeiro atributo
+
+    
+    printf("\n    ***Comparação de Cartas ***\n");
+    printf("\n    ***Escolha o primeiro atributo***\n");
+    printf ("1  População\n");
+    printf ("2  Área\n");
+    printf ("3  PIB\n");
+    printf ("4  Número de Pontos Turísticos\n");
+    printf ("5  Densidade Populacional\n");
+    printf ("6  PIB per Capita\n");
+    printf ("7  Super Poder\n");
+    printf ("Escolha: ");
+    scanf ("%d" , &primeiroatributo ); 
 
 
-    printf("\n    ***Comparação de Cartas***:\n");
-    printf ("População :%d ***Carta 1 venceu***\n " , resultadopopulacao ) ;
-        printf ("Área :%d ***Carta 1 venceu***\n " , resultadoarea );
-            printf ("PIB :%d ***Carta 1 venceu***\n " , resultadopib );
-                printf ("Pontos Turísticos :%d ***Carta 1 venceu***\n " , resultadoponto  );
-                    printf ("Densidade Populacional :%d ***Carta 2 venceu***\n " , resultadodensidade );
-                        printf ("PIB per Capita :%d ***Carta 1 venceu***\n " , resultadocar) ;
-                            printf ("Super Poder :%d ***Carta 1 venceu***\n" , resultadosuper);
+    switch (primeiroatributo)
+    {
+
+         case 1 :
+
+           printf ("*** O primeiro atributo será População ! ***\n");
+           printf ("*** Valor do atributo Carta 1 : %lu ***\n" , populacao );
+           printf ("*** Valor do atributo Carta 2 : %lu ***\n" , populacao2 );
+           resultado1 = populacao > populacao2 ? 1 : 0 ;
+
+           
+        
+        break;
+
+
+
+            case 2 :
+
+            printf ("*** O primeiro atributo será Área ! ***\n");
+            printf ("*** Valor do atributo Carta 1 : %.2fkm²***\n" , area );
+            printf ("*** Valor do atributo Carta 2 : %.2fkm²***\n" , area2 );
+            resultado1 = area > area2 ? 1 : 0 ;
+
+    
+        
+        break;
+
+
+
+            case 3 :
+
+            printf ("*** O primeiro atributo será PIB ! ***\n");
+            printf ("*** Valor do atributo Carta 1 : %.2f bilhões de reais***\n" , pib );
+            printf ("*** Valor do atributo Carta 2 : %.2f bilhões de reais***\n" , pib2 );
+            resultado1 = pib > pib2 ? 1 : 0 ;
+
+    
+        
+        break;
+
+
+
+            case 4 :
+
+            printf ("*** O primeiro atributo será Pontos Turísticos  ! ***\n");
+            printf ("*** Valor do atributo Carta 1 : %d***\n" , pontos );
+            printf ("*** Valor do atributo Carta 2 : %d***\n" , pontos2 );
+            resultado1 = pontos > pontos2 ? 1 : 0 ;
+
+    
+        
+        break;
+
+
+
+            case 5 :
+
+            printf ("*** O primeiro atributo será Densidade Populacional ! ***\n");
+            printf ("*** Valor do atributo Carta 1 : %.2F hab/km²***\n" , densidade );
+            printf ("*** Valor do atributo Carta 2 : %.2F hab/km²***\n" , densidade2 );
+            resultado1 = densidade < densidade2 ? 1 : 0 ;
+
+    
+        
+        break;
+
+
+
+            case 6:
+
+            printf ("*** O primeiro atributo será PIB per Capita  ! ***\n");
+            printf ("*** Valor do atributo Carta 1 : %.2f reais***\n" , percapita );
+            printf ("*** Valor do atributo Carta 2 : %.2f reais***\n" , percapita2 );
+            resultado1 = percapita > percapita2 ? 1 : 0 ;
+
+    
+        
+        break;
+
+
+
+
+            case 7:
+
+            printf ("*** O primeiro atributo será Super Poder ! ***\n");
+            printf ("*** Valor do atributo Carta 1 : %.2f reais***\n" , soma1 );
+            printf ("*** Valor do atributo Carta 2 : %.2f reais***\n" , soma2 );
+            resultado1 = soma1 > soma2 ? 1 : 0 ;
+
+    
+        
+        break;
+
+
+    default: printf ("*** Atributo Invalido ! ***\n");
+
+
+        break;
+    }
+
+           // escolher segundo atributo
+
+
+    printf("\n    ***Comparação de Cartas ***\n");
+    printf("\n    ***Escolha o segundo atributo***\n");
+    printf ("1  População\n");
+    printf ("2  Área\n");
+    printf ("3  PIB\n");
+    printf ("4  Número de Pontos Turísticos\n");
+    printf ("5  Densidade Populacional\n");
+    printf ("6  PIB per Capita\n");
+    printf ("7  Super Poder\n");
+    printf ("Escolha: ");
+    scanf ("%d" , &segundoatributo ); 
+
+
+    if (primeiroatributo == segundoatributo) {
+     
+        printf ("Falha você escolheu o mesmo atributo\n") ;
+
+    } else { 
+
+        switch (segundoatributo)
+
+        {    case 1 :
+
+           printf ("*** O Segundo  atributo será População ! ***\n");
+           printf ("*** Valor do atributo Carta 1 : %lu ***\n" , populacao );
+           printf ("*** Valor do atributo Carta 2 : %lu ***\n" , populacao2 );
+           resultado2 = populacao > populacao2 ? 1 : 0 ;
+
+           
+        
+        break;
+
+
+
+            case 2 :
+
+            printf ("*** O Segundo  atributo será Área ! ***\n");
+            printf ("*** Valor do atributo Carta 1 : %.2fkm²***\n" , area );
+            printf ("*** Valor do atributo Carta 2 : %.2fkm²***\n" , area2 );            
+            resultado2 = area > area2 ? 1 : 0 ;
+
+    
+        
+        break;
+
+
+
+            case 3 :
+
+            printf ("*** O Segundo  atributo será PIB ! ***\n");
+            printf ("*** Valor do atributo Carta 1 : %.2f bilhões de reais***\n" , pib );
+            printf ("*** Valor do atributo Carta 2 : %.2f bilhões de reais***\n" , pib2 );           
+            resultado2 = pib > pib2 ? 1 : 0 ;
+
+    
+        
+        break;
+
+
+
+            case 4 :
+
+            printf ("*** O Segundo  atributo será Pontos Turísticos  ! ***\n");
+            printf ("*** Valor do atributo Carta 1 : %d***\n" , pontos );
+            printf ("*** Valor do atributo Carta 2 : %d***\n" , pontos2 );            
+            resultado2 = pontos > pontos2 ? 1 : 0 ;
+
+    
+        
+        break;
+
+
+
+            case 5 :
+
+            printf ("*** O Segundo  atributo será Densidade Populacional ! ***\n");
+            printf ("*** Valor do atributo Carta 1 : %.2F hab/km²***\n" , densidade );
+            printf ("*** Valor do atributo Carta 2 : %.2F hab/km²***\n" , densidade2 );            
+            resultado2 = densidade < densidade2 ? 1 : 0 ;
+
+    
+        
+        break;
+
+
+
+            case 6:
+
+            printf ("*** O Segundo  atributo será PIB per Capita  ! ***\n");
+            printf ("*** Valor do atributo Carta 1 : %.2f reais***\n" , percapita );
+            printf ("*** Valor do atributo Carta 2 : %.2f reais***\n" , percapita2 );            
+            resultado2 = percapita > percapita2 ? 1 : 0 ;
+
+    
+        
+        break;
+
+
+
+
+            case 7:
+
+            printf ("*** O Segundo  atributo será Super Poder ! ***\n");
+            printf ("*** Valor do atributo Carta 1 : %.2f reais***\n" , soma1 );
+            printf ("*** Valor do atributo Carta 2 : %.2f reais***\n" , soma2 );           
+            resultado2 = soma1 > soma2 ? 1 : 0 ;
+
+    
+        
+        break;
+
+        
+        default: 
+
+            printf ("*** Segundo Atributo Invalido ! ***\n");
+
+
+
+
+            break;
+        }
+
+        printf ("***Resultado***\n");
+        printf ("Carta 1 %s -- Carta 2 %s\n" , nomedacidade , nomedacidade2 );
+
+        if (resultado1 && resultado2) {
+        printf ("Carta 1 Venceu os  2 atributos\n") ;   
+
+        } else if (resultado1 || resultado2) {
+               
+        printf ("Empatou !\n");
+
+        } else {
+
+        printf ("Carta 2 Venceu os  2 atributos\n");
+        }
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+    
+
+
+
+
+
+        
+    
+
+
+
+
+    
+
+
+
+
+
+
+
 
 
 
